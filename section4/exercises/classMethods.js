@@ -7,18 +7,18 @@ Complete each task, using the Burrito class below as a starting point.
 Make sure to run the file with node in your command line.
 */
 
-// The burrito should also have a property called `toppings`. It should be assigned to 
-// the toppings parameter in the constructor.
+// The burrito should also have a property called `toppings`. It should be assigned to  *
+// the toppings parameter in the constructor. *
 
-// Below/outside of the class declaration, create 3 object instances of a burrito. 
-// The toppings argument should be an Array of Strings.
+// Below/outside of the class declaration, create 3 object instances of a burrito. *
+// The toppings argument should be an Array of Strings. *
 
-// The burrito class should have a method named `changeProtein`. 
-// This method should accept one argument, a String.
-// The method should re-assign this.protein to the value that was passed in.
+// The burrito class should have a method named `changeProtein`. *
+// This method should accept one argument, a String. *
+// The method should re-assign this.protein to the value that was passed in. *
 
-// Call the `changeProtein` method on a burrito, then log the burrito to verify 
-// that the protein has been changed.
+// Call the `changeProtein` method on a burrito, then log the burrito to verify *
+// that the protein has been changed. *
 
 // The burrito class should have a method named `addTopping`.
 // This method should accept one argument, a String.
@@ -28,13 +28,37 @@ Make sure to run the file with node in your command line.
 // that the proteins have been changed.
 
 class Burrito {
-  constructor(protein, base) {
-    this.protein = protein;
+  constructor(protein, base, toppings)  {    //parameters
+    this.protein = protein; //Properties
     this.base = base;
+    this.toppings = toppings;
+
   }
+
+changeProtein() {
+  this.protein = "Sub meat for Chicharron";
+}
+
+addTopping() {
+  this.toppings.push("Hot Salsa");
+
+
+
+}
 
   // ADD CODE
 };
+var chickenBurrito = new Burrito("Chicken", "Lime rice", ["Pico", "Queso","Salsa"]);
+console.log(chickenBurrito);
+var carnitaBurrito = new Burrito("Carnitas", "Brown Rice", ["Borracho Beans", "Queso","Green Salsa"]);  //object instances / Arguments here
+console.log(carnitaBurrito);
+var steakBurrito = new Burrito("Steak", "Mexican Rice", ["Cilantro", "Queso", "Beans", ]);
+console.log(steakBurrito);
 
-// ADD CODE
+chickenBurrito.addTopping();
+console.log(chickenBurrito);
 
+
+
+steakBurrito.changeProtein();
+console.log(steakBurrito);
